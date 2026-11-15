@@ -67,27 +67,13 @@ body {
   text-shadow: 0 0 10px white;
 }
 
-.falling-item.love-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  color: white;
-  text-shadow:
-    0 0 8px white,
-    0 2px 12px rgba(150,150,150,.4);
-}
-
 @keyframes falling {
   0% {
     transform: translate3d(0,-30px,0) rotate(0deg);
     opacity: 0;
   }
 
-  10% {
-    opacity: .95;
-  }
+  10% { opacity: .95; }
 
   50% {
     transform: translate3d(35px,50vh,0) rotate(180deg);
@@ -169,7 +155,7 @@ body {
   50% { transform: translateY(-20px) rotate(15deg); }
 }
 
-/* IPHONE GLASS */
+/* GLASS */
 
 .glass {
   position: relative;
@@ -225,11 +211,6 @@ nav a {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   transition: .3s;
-}
-
-.nav-music:hover {
-  background: rgba(255,255,255,.8);
-  transform: scale(1.1);
 }
 
 .nav-music.active {
@@ -304,11 +285,6 @@ nav a {
   font-size: 11px;
   letter-spacing: 2px;
   transition: .4s;
-}
-
-.hero-button:hover {
-  transform: scale(1.07);
-  background: rgba(255,255,255,.8);
 }
 
 /* SECTIONS */
@@ -475,11 +451,6 @@ section {
   transition: .3s;
 }
 
-.music-button:hover {
-  background: white;
-  transform: scale(1.06);
-}
-
 /* FOOTER */
 
 footer {
@@ -505,9 +476,7 @@ footer p {
 /* RESPONSIVE */
 
 @media(max-width:600px) {
-  nav {
-    padding: 12px 10px;
-  }
+  nav { padding: 12px 10px; }
 
   .logo {
     font-size: 10px;
@@ -526,25 +495,15 @@ footer p {
     margin-left: 6px;
   }
 
-  .gallery {
-    gap: 12px;
-  }
+  .gallery { gap: 12px; }
 
-  .photo-card img {
-    height: 175px;
-  }
+  .photo-card img { height: 175px; }
 
-  section {
-    padding: 70px 18px;
-  }
+  section { padding: 70px 18px; }
 
-  .section-title {
-    font-size: 37px;
-  }
+  .section-title { font-size: 37px; }
 
-  .fog {
-    height: 140px;
-  }
+  .fog { height: 140px; }
 }
 
 /* SCROLL ANIMATION */
@@ -572,13 +531,10 @@ footer p {
 
 <body>
 
-<!-- FALLING DECORATION -->
 <div class="falling-layer" id="fallingLayer"></div>
 
-<!-- FOG -->
 <div class="fog"></div>
 
-<!-- CLOUDS AND FLOWERS -->
 <div class="cloud one">☁️</div>
 <div class="cloud two">☁️</div>
 <div class="flower one">✿</div>
@@ -666,22 +622,22 @@ footer p {
   <div class="gallery">
 
     <div class="photo-card glass">
-      <img src="https://placehold.co/600x800/eeeeee/888888?text=PHOTO+1" alt="Photo 1">
+      <img src="1.jpg" alt="Photo 1">
       <p>Beautiful Moment</p>
     </div>
 
     <div class="photo-card glass">
-      <img src="https://placehold.co/600x800/e5e5e5/888888?text=PHOTO+2" alt="Photo 2">
+      <img src="2.jpg" alt="Photo 2">
       <p>Lovely Memories</p>
     </div>
 
     <div class="photo-card glass">
-      <img src="https://placehold.co/600x800/f0f0f0/888888?text=PHOTO+3" alt="Photo 3">
+      <img src="3.jpg" alt="Photo 3">
       <p>Forever Together</p>
     </div>
 
     <div class="photo-card glass">
-      <img src="https://placehold.co/600x800/e8e8e8/888888?text=PHOTO+4" alt="Photo 4">
+      <img src="4.jpg" alt="Photo 4">
       <p>Endless Love</p>
     </div>
 
@@ -730,7 +686,7 @@ footer p {
 
 <script>
 
-/* FALLING HEARTS, FLOWERS AND I LOVE YOU */
+/* FALLING HEARTS AND FLOWERS */
 
 const fallingLayer = document.getElementById("fallingLayer");
 
@@ -741,9 +697,8 @@ const fallingSymbols = [
   { symbol: "❀", type: "flower" },
   { symbol: "✿", type: "flower" },
   { symbol: "✧", type: "flower" },
-  { symbol: "I LOVE YOU", type: "love-text" },
-  { symbol: "I LOVE YOU", type: "love-text" },
-  { symbol: "I LOVE YOU ♡", type: "love-text" }
+  { symbol: "🌸", type: "flower" },
+  { symbol: "🤍", type: "heart" }
 ];
 
 function createFallingItem() {
